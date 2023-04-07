@@ -1,0 +1,51 @@
+.nav {
+   max-width: 1224px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 33px;
+   margin-left: auto;
+   margin-right: auto;
+
+   &__logo {}
+
+   h3 {
+      color: #fff;
+      font-weight: 50px;
+   }
+
+   &__links {
+      margin: 0;
+      padding: 50px;
+      list-style-type: none;
+
+   }
+
+   li {
+      display: inline;
+      padding: 25px;
+      transition: opacity 0.5s ease-in-out;
+
+      &:hover {
+         opacity: 0.8;
+      }
+
+      a {
+         color: #918d8d;
+      }
+   }
+
+
+   &__socialIcons {
+
+      a {
+         color: #fff;
+         padding: 5px;
+      }
+
+   }
+
+
+
+
+}
