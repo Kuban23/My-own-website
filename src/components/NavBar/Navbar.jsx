@@ -11,19 +11,19 @@ const Navbar = () => {
       </div>
       <ul className="nav__links">
         <li>
-          <a href="#">Главная</a>
+          <a className="active-link" href="#home">Главная</a>
         </li>
         <li>
-          <a href="#">Обо мне</a>
+          <a href="#about">Обо мне</a>
         </li>
         <li>
-          <a href="#">Мой stack</a>
+          <a href="#skills">Мой stack</a>
         </li>
         <li>
-          <a href="#">Проекты</a>
+          <a href="#work">Проекты</a>
         </li>
         <li>
-          <a href="#">Обратная связь</a>
+          <a href="#contact">Обратная связь</a>
         </li>
       </ul>
       <div className="nav__socialIcons">
