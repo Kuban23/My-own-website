@@ -1,0 +1,150 @@
+.portfolio {
+   max-width: 1224px;
+   min-height: 100vh;
+   padding: 112px 24px 0px 24px;
+   margin: 0 auto;
+
+   &__title {
+      text-align: center;
+
+      span {
+         color: #e1094a;
+         text-transform: uppercase;
+         font-size: 12px;
+         letter-spacing: 5px;
+      }
+
+      h1 {
+         margin-bottom: 48px;
+         color: #fff;
+         font-size: 50px;
+      }
+   }
+
+   &__btns {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+
+      button {
+         padding: 8px 14px;
+         border-radius: 4px;
+         border: none;
+         margin-top: 16px;
+         color: #000;
+         font-family: 'Poppins';
+         font-size: 14px;
+         font-weight: 600;
+         cursor: pointer;
+         background: #fff;
+
+         &.active {
+            background: #e1094a;
+            color: #fff;
+         }
+      }
+
+   }
+
+   &__workImages {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      // display: flex;
+      // flex-direction: row;
+      // flex-wrap: wrap;
+      margin-top: 80px;
+      gap: 10px;
+
+   }
+
+   &__workImage {
+      max-width: 380px;
+      height: 250px;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+
+      img {
+         object-fit: cover;
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   &__hover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      background: #e1094a;
+      z-index: 5;
+
+      a {
+         width: 40px;
+         height: 40px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border-radius: 50%;
+         background: rgba(255, 255, 255, 0.25);
+
+         svg {
+            color: #fff;
+            font-size: 20px;
+         }
+
+      }
+   }
+
+   &__talkProjects {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      background: #fff;
+      margin-top: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      border-radius: 4px;
+      flex-wrap: wrap;
+      gap: 16px;
+   }
+
+   &__talkTitle {
+
+      h3 {
+         font-size: 20px;
+
+         span {
+            font-size: 36px;
+            color: #e1094a;
+         }
+      }
+   }
+
+   &__talkContact {
+      background: #e1094a;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-bottom: 9px;
+      align-self: flex-end;
+      padding: 10px 16px;
+
+      a {
+         color: #fff;
+         text-decoration: none;
+      }
+   }
+
+
+
+
+
+
+}
