@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/my-own-website/static/css/main.a9e01c0d.css",
-    "main.js": "/my-own-website/static/js/main.72d784af.js",
+    "main.css": "/my-own-website/static/css/main.7ca4486f.css",
+    "main.js": "/my-own-website/static/js/main.f9b7db57.js",
     "static/js/787.3bf96c60.chunk.js": "/my-own-website/static/js/787.3bf96c60.chunk.js",
+    "static/media/russian_travel.jpg": "/my-own-website/static/media/russian_travel.ef0aac13bebd924136ee.jpg",
+    "static/media/mesto.png": "/my-own-website/static/media/mesto.859534a33abc814c9314.png",
+    "static/media/pizza.jpg": "/my-own-website/static/media/pizza.89198173134c6c6b53a0.jpg",
+    "static/media/telegrammbot.jpg": "/my-own-website/static/media/telegrammbot.55d82f1882c8a5a31edf.jpg",
+    "static/media/cinema.png": "/my-own-website/static/media/cinema.00fc7a713a320f507a2c.png",
     "static/media/myphoto.jpg": "/my-own-website/static/media/myphoto.84c7343a723df7d545a6.jpg",
+    "static/media/todo.png": "/my-own-website/static/media/todo.057130b82de51281bc2b.png",
     "index.html": "/my-own-website/index.html",
-    "main.a9e01c0d.css.map": "/my-own-website/static/css/main.a9e01c0d.css.map",
-    "main.72d784af.js.map": "/my-own-website/static/js/main.72d784af.js.map",
+    "main.7ca4486f.css.map": "/my-own-website/static/css/main.7ca4486f.css.map",
+    "main.f9b7db57.js.map": "/my-own-website/static/js/main.f9b7db57.js.map",
     "787.3bf96c60.chunk.js.map": "/my-own-website/static/js/787.3bf96c60.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9e01c0d.css",
-    "static/js/main.72d784af.js"
+    "static/css/main.7ca4486f.css",
+    "static/js/main.f9b7db57.js"
   ]
 }
