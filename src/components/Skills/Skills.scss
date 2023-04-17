@@ -1,14 +1,22 @@
 .skills {
    max-width: 1224px;
    min-height: 100vh;
-   padding: 112px 24px 0px 24px;
+   padding: 0px 24px 0px 24px;
    margin: 0 auto;
+
+   @media screen and (max-width: 500px) {
+      padding: 112px 16px 0 16px;
+   }
 
    h1 {
       text-align: center;
       margin-bottom: 48px;
       color: #fff;
       font-size: 50px;
+
+      @media screen and (max-width: 750px) {
+         font-size: 40px;
+      }
    }
 
    &__select {
@@ -45,6 +53,11 @@
       max-width: 900px;
       row-gap: 50px;
 
+      @media screen and (max-width: 500px) {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 32px;
+      }
+
       div {
          display: flex;
          justify-content: center;
@@ -73,6 +86,10 @@
       span {
          font-size: 22px;
          padding-left: 40px;
+
+         @media screen and (max-width: 410px) {
+            font-size: 16px;
+         }
       }
    }
 
@@ -82,12 +99,20 @@
 
       h3 {
          font-size: 17px;
+
+         @media screen and (max-width: 410px) {
+            font-size: 14px;
+         }
       }
 
       p,
       li {
          font-size: 14px;
          opacity: 0.5;
+
+         @media screen and (max-width: 405px) {
+            font-size: 0.65rem;
+         }
       }
    }
 

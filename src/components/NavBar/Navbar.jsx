@@ -1,47 +1,80 @@
 import React from 'react';
 import { FaLinkedin, FaTelegram, FaGoodreads, FaGithubSquare } from 'react-icons/fa';
+import { HiMenuAlt4, HiX } from "react-icons/hi";
 
 import './Navbar.scss';
 
+const navLinks = ['Главная', 'Обо мне', 'Мой stack', 'Проекты', 'Обратная связь'];
+
+const socialIcons = [
+   { name: <FaGoodreads />, address: 'https://kubanesin@gmail.com' },
+   { name: <FaTelegram />, address: 'https://telegram.me/@EsinAndrew' },
+   { name: <FaLinkedin />, address: 'http://www.linkedin.com/in/андрей-есин' },
+   { name: <FaGithubSquare />, address: 'https://github.com/Kuban23' },
+];
+
 const Navbar = () => {
-  return (
-    <div className="nav">
-      <div className="nav__logo">
-        <h3>АE</h3>
+   const [activeIndex, setActiveIndex] = React.useState(0);
+
+   const [scroll, setScroll] = React.useState(false);
+
+   const [toggle, setToggle] = React.useState(false)
+
+   React.useEffect(() => {
+      window.addEventListener('scroll', () => setScroll(window.scrollY > 20))
+   }, [])
+
+   return (
+      <div className={scroll ? "wrapper active" : "wrapper"}>
+         <div className="nav">
+            <div className="nav__logo">
+               <h3>АE</h3>
+            </div>
+            <ul className="nav__links">
+               {navLinks.map((link, i) => (
+                  <li key={i}>
+                     <a
+                        onClick={() => setActiveIndex(i)}
+                        className={activeIndex === i ? 'active-link' : ''}
+                        href={`#${link}`}>
+                        {link}
+                     </a>
+                  </li>
+               ))}
+            </ul>
+            <div className="nav__socialIcons">
+               {socialIcons.map((icon, i) => (
+                  <a key={i} href={`${icon.address}`} target="blank">
+                     {icon.name}
+                  </a>
+               ))}
+            </div>
+
+            <div className="nav__menu">
+               <HiMenuAlt4
+                  onClick={() => setToggle(true)}
+               />
+            </div>
+            <div className="nav__closeMenu"></div>
+            <div className="nav__menuX">
+               <HiX
+                  onClick={() => setToggle(false)}
+               />
+               {navLinks.map((link, i) => (
+                  <li key={i}>
+                     <a
+                        onClick={() => setActiveIndex(i)}
+                        className={activeIndex === i ? 'active-link' : ''}
+                        href={`#${link}`}>
+                        {link}
+                     </a>
+                  </li>
+               ))}
+            </div>
+
+         </div>
       </div>
-      <ul className="nav__links">
-        <li>
-          <a className="active-link" href="#home">Главная</a>
-        </li>
-        <li>
-          <a href="#about">Обо мне</a>
-        </li>
-        <li>
-          <a href="#skills">Мой stack</a>
-        </li>
-        <li>
-          <a href="#work">Проекты</a>
-        </li>
-        <li>
-          <a href="#contact">Обратная связь</a>
-        </li>
-      </ul>
-      <div className="nav__socialIcons">
-        <a href="#">
-          <FaGoodreads />
-        </a>
-        <a href="#">
-          <FaTelegram />
-        </a>
-        <a href="#">
-          <FaLinkedin />
-        </a>
-        <a href="#">
-          <FaGithubSquare />
-        </a>
-      </div>
-    </div>
-  );
+   );
 };
 
 export default Navbar;

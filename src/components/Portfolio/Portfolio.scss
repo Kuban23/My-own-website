@@ -4,6 +4,10 @@
    padding: 112px 24px 0px 24px;
    margin: 0 auto;
 
+   @media screen and (max-width: 500px) {
+      padding: 112px 16px 0 16px;
+   }
+
    &__title {
       text-align: center;
 
@@ -18,6 +22,10 @@
          margin-bottom: 48px;
          color: #fff;
          font-size: 50px;
+
+         @media screen and (max-width: 750px) {
+            font-size: 40px;
+         }
       }
    }
 
@@ -49,11 +57,16 @@
    &__workImages {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      // display: flex;
-      // flex-direction: row;
-      // flex-wrap: wrap;
       margin-top: 80px;
       gap: 10px;
+
+      @media screen and (max-width: 1000px) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: 700px) {
+         grid-template-columns: 1fr;
+      }
 
    }
 
@@ -63,6 +76,10 @@
       position: relative;
       margin-left: auto;
       margin-right: auto;
+
+      @media screen and (max-width:400px) {
+         max-width: 350px;
+      }
 
       img {
          object-fit: cover;
@@ -124,6 +141,14 @@
          span {
             font-size: 36px;
             color: #e1094a;
+
+            @media screen and (max-width: 599px) {
+               font-size: 32px;
+            }
+
+            @media screen and (max-width: 370px) {
+               font-size: 24px;
+            }
          }
       }
    }
