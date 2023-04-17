@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-own-website/static/css/main.e4a48525.css",
-    "main.js": "/my-own-website/static/js/main.e9065a6b.js",
+    "main.css": "/my-own-website/static/css/main.85255867.css",
+    "main.js": "/my-own-website/static/js/main.d78f05ff.js",
     "static/js/787.3bf96c60.chunk.js": "/my-own-website/static/js/787.3bf96c60.chunk.js",
     "static/media/russian_travel.jpg": "/my-own-website/static/media/russian_travel.ef0aac13bebd924136ee.jpg",
     "static/media/mesto.png": "/my-own-website/static/media/mesto.859534a33abc814c9314.png",
@@ -11,12 +11,12 @@
     "static/media/myphoto.jpg": "/my-own-website/static/media/myphoto.84c7343a723df7d545a6.jpg",
     "static/media/todo.png": "/my-own-website/static/media/todo.057130b82de51281bc2b.png",
     "index.html": "/my-own-website/index.html",
-    "main.e4a48525.css.map": "/my-own-website/static/css/main.e4a48525.css.map",
-    "main.e9065a6b.js.map": "/my-own-website/static/js/main.e9065a6b.js.map",
+    "main.85255867.css.map": "/my-own-website/static/css/main.85255867.css.map",
+    "main.d78f05ff.js.map": "/my-own-website/static/js/main.d78f05ff.js.map",
     "787.3bf96c60.chunk.js.map": "/my-own-website/static/js/787.3bf96c60.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e4a48525.css",
-    "static/js/main.e9065a6b.js"
+    "static/css/main.85255867.css",
+    "static/js/main.d78f05ff.js"
   ]
 }
