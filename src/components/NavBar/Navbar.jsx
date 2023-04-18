@@ -1,14 +1,15 @@
 import React from 'react';
 import { FaLinkedin, FaTelegram, FaGoodreads, FaGithubSquare } from 'react-icons/fa';
-import { HiMenuAlt4, HiX } from "react-icons/hi";
+import { HiMenuAlt4, HiX } from 'react-icons/hi';
+import { motion } from 'framer-motion';
 
 import './Navbar.scss';
 
 const navLinks = ['Главная', 'Обо мне', 'Мой stack', 'Проекты', 'Обратная связь'];
 
 const socialIcons = [
-   { name: <FaGoodreads />, address: 'https://kubanesin@gmail.com' },
-   { name: <FaTelegram />, address: 'https://telegram.me/@EsinAndrew' },
+   { name: <FaGoodreads />, address: 'mailto:kubanesin@gmail.com' },
+   { name: <FaTelegram />, address: 'https://telegram.me/EsinAndrew' },
    { name: <FaLinkedin />, address: 'http://www.linkedin.com/in/андрей-есин' },
    { name: <FaGithubSquare />, address: 'https://github.com/Kuban23' },
 ];
@@ -18,14 +19,45 @@ const Navbar = () => {
 
    const [scroll, setScroll] = React.useState(false);
 
-   const [toggle, setToggle] = React.useState(false)
+   const [toggle, setToggle] = React.useState(false);
 
    React.useEffect(() => {
-      window.addEventListener('scroll', () => setScroll(window.scrollY > 20))
-   }, [])
+      window.addEventListener('scroll', () => setScroll(window.scrollY > 20));
+   }, []);
+
+   const menuVariants = {
+      hidden: {
+         scale: 0,
+      },
+      visible: {
+         scale: 50,
+         transition: {
+            type: 'tween',
+            duration: 0.8,
+         },
+      },
+   };
+
+   const navLinkVariants = {
+      hidden: {
+         display: 'none',
+         opacity: 0,
+      },
+      visible: {
+         opacity: 1,
+         y: -30,
+         transition: {
+            delay: 0.8,
+         },
+      },
+   };
 
    return (
-      <div className={scroll ? "wrapper active" : "wrapper"}>
+      <motion.div
+         initial={{ y: -35 }}
+         animate={{ y: -3 }}
+         transition={{ duration: 0.8 }}
+         className={scroll ? 'wrapper active' : 'wrapper'}>
          <div className="nav">
             <div className="nav__logo">
                <h3>АE</h3>
@@ -51,15 +83,18 @@ const Navbar = () => {
             </div>
 
             <div className="nav__menu">
-               <HiMenuAlt4
-                  onClick={() => setToggle(true)}
-               />
+               <HiMenuAlt4 onClick={() => setToggle(true)} />
             </div>
-            <div className="nav__closeMenu"></div>
-            <div className="nav__menuX">
-               <HiX
-                  onClick={() => setToggle(false)}
-               />
+            <motion.div
+               className="nav__closeMenu"
+               variants={menuVariants}
+               initial="hidden"
+               animate={toggle ? 'visible' : 'hidden'}></motion.div>
+            <motion.div
+               variants={navLinkVariants}
+               animate={toggle ? 'visible' : 'hidden'}
+               className="nav__menuX">
+               <HiX onClick={() => setToggle(false)} />
                {navLinks.map((link, i) => (
                   <li key={i}>
                      <a
@@ -70,10 +105,9 @@ const Navbar = () => {
                      </a>
                   </li>
                ))}
-            </div>
-
+            </motion.div>
          </div>
-      </div>
+      </motion.div>
    );
 };
 
