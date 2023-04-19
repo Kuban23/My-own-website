@@ -78,7 +78,11 @@ const About = () => {
                      <span className="about__bio-value">{bio.value}</span>
                   </div>
                ))}
-               <motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }} href="#" download="">
+               <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                  href="https://disk.yandex.ru/i/UxgCzPtZ9nNCqw"
+                  download="" target='blank'>
                   Скачать резюме
                </motion.a>
             </motion.div>

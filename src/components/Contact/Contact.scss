@@ -1,162 +1,163 @@
-.contact {
-   max-width: 1224px;
-   min-height: 100vh;
-   padding: 112px 24px 0px 24px;
-   margin: 0 auto;
+@import '../../scss/variables.scss';
 
-   @media screen and (max-width: 600px) {
-      padding: 112px 16px 50px 16px;
-   }
+.contact{
+	max-width:1224px;
+	min-height: 100vh;
+	padding: 112px 24px 0px 24px;
+	margin: 0 auto;
 
-   &__title {
-      text-align: center;
+	@media screen and (max-width: 600px) {
+		padding: 112px 16px 50px 16px;
+	}
 
-      span {
-         color: #e1094a;
-         text-transform: uppercase;
-         font-size: 12px;
-         letter-spacing: 5px;
+	&__title{
+		text-align: center; 
 
-         @media screen and (max-width: 750px) {
-            font-size: 10px;
-         }
-      }
+		span{
+			color: $pink;
+			text-transform: uppercase;
+			font-size: 12px;
+			letter-spacing: 5px;  
+			@media screen and (max-width: 750px) {
+				font-size: 10px;
+			}		 
+			}
 
-      h1 {
-         margin-bottom: 48px;
-         color: #fff;
-         font-size: 50px;
+			h1{		
+				margin-bottom: 48px;
+				color: #fff;
+				font-size: 50px;
 
-         @media screen and (max-width: 750px) {
-            font-size: 30px;
-         }
-      }
-   }
+				@media screen and (max-width: 750px) {
+					font-size: 30px;
+				}
+				}	
+	}
 
-   &__form {
-      max-width: 1100px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      background: #fff;
-      border-radius: 4px;
-      padding: 32px;
-      margin-left: auto;
-      margin-right: auto;
-      gap: 32px;
-      overflow: hidden;
+	&__form{
+		max-width: 1100px;
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		background: #fff;
+		border-radius: 4px;
+		padding: 32px;
+		margin-left: auto;
+		margin-right: auto;
+		gap: 32px;
+		overflow: hidden;
 
-      @media screen and (max-width: 600px) {
-         grid-template-columns: repeat(1, 1fr);
-      }
-   }
+		@media screen and (max-width: 600px) {
+			grid-template-columns: repeat(1,1fr);
+		}
+	}
 
-   &__left_container {
+	&__left_container{
+		
+		h3{
+		 font-size: 24px;
+		 margin-bottom: 16px;		 
+		}
 
-      h3 {
-         font-size: 24px;
-         margin-bottom: 16px;
-      }
+		p{
+			font-size: 14px;
+			margin-bottom: 16px;
+			margin: 0;
+		}
+	}
 
-      p {
-         font-size: 14px;
-         margin-bottom: 16px;
-         margin: 0;
-      }
-   }
+	&__left{
+		display: flex;
+		align-items: center;
+		margin-top: 16px;
 
-   &__left {
-      display: flex;
-      align-items: center;
-      margin-top: 16px;
+		div{
+			width: 50px;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: $pink;
+			border-radius: 50%;
+			color: #fff;
+			margin-right: 16px;
+		}
 
-      div {
-         width: 50px;
-         height: 50px;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         background: #e1094a;
-         border-radius: 50%;
-         color: #fff;
-         margin-right: 16px;
-      }
+		p{
+			font-size: 14px;
+			margin: 0;
+		}
+	}
 
-      p {
-         font-size: 14px;
-         margin: 0;
-      }
-   }
+	&__icons{
+		display: flex;
+		margin-top: 16px;
 
-   &__icons {
-      display: flex;
-      margin-top: 16px;
+		svg{
+			width: 20px;
+			height: 20px;
+			}
+	
+			a{				
+			color: #17171C;
+			margin: 7px;
+			transition: .4s;			
+			
+			:hover {
+			transform: translateY(3px);				
+		  }
+		}
+	}
 
-      svg {
-         width: 20px;
-         height: 20px;
-      }
+	&__right{
+		h3{
+			font-size: 24px;
+			margin-bottom: 16px;		 
+		  }
 
-      a {
-         color: #17171C;
-         margin: 7px;
-         transition: .4s;
+		  div{
+			width: 100%;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+			gap: 8px;
+		  }
 
-         :hover {
-            transform: translateY(3px);
-         }
-      }
-   }
+		  input{
+			margin-bottom: 8px;
+			border: none;
+			background: #f3f3f3;
+			padding: 16px 24px;
+			border-radius: 4px;
+			font-size: 14px;
+			outline: none;
+		  }
 
-   &__right {
-      h3 {
-         font-size: 24px;
-         margin-bottom: 16px;
-      }
+		  textarea{
+			border: none;
+			background: #f3f3f3;
+			padding: 16px 24px;
+			margin-bottom: 8px;
+			border-radius: 4px;
+			font-size: 14px;
+			min-height: 150px;
+			outline: none;
+			resize: none;
+			overflow: hidden;
+		  }
+	}
 
-      div {
-         width: 100%;
-         display: grid;
-         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-         gap: 8px;
-      }
+		&__btn{
+			margin-top: 16px;
+			background: $pink;
+			border-radius: 4px;
+			padding: 10px 16px;
+			font-size: 14px;
+			max-width: 100px;
 
-      input {
-         margin-bottom: 8px;
-         border: none;
-         background: #f3f3f3;
-         padding: 16px 24px;
-         border-radius: 4px;
-         font-size: 14px;
-         outline: none;
-      }
-
-      textarea {
-         border: none;
-         background: #f3f3f3;
-         padding: 16px 24px;
-         margin-bottom: 8px;
-         border-radius: 4px;
-         font-size: 14px;
-         min-height: 150px;
-         outline: none;
-         resize: none;
-         overflow: hidden;
-      }
-   }
-
-   &__btn {
-      margin-top: 16px;
-      background: #e1094a;
-      border-radius: 4px;
-      padding: 10px 16px;
-      font-size: 14px;
-      max-width: 100px;
-
-      a {
-         text-decoration: none;
-         color: #fff;
-      }
-   }
+			a{
+				text-decoration: none;
+				color: #fff;
+			}
+		}
 
 
 }

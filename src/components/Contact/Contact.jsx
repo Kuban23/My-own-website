@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   FaMapMarkerAlt,
@@ -14,7 +13,7 @@ import './Contact.scss';
 
 const Contact = () => {
   return (
-    <div className="contact" id="contact">
+    <div className="contact" id="Обратная связь">
       <div className="contact__title">
         <span>Связаться со мной</span>
         <h1>Мои контакты</h1>
