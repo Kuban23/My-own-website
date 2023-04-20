@@ -48,10 +48,10 @@ const Home = () => {
           transition={{ duration: 0.3 }}
           href="#Обратная связь"
           >
-          Связаться со мной
-        </motion.a>
-        <div className="profile__web profile__web-position">веб-разработчик</div>
-        <div className="profile__uiux rofile__uiux-position">UI/UX дизайнер</div>
+          Связаться со мной 
+        </motion.a>        
+        <div className="profile__uiux rofile__uiux-position">веб-разработчик</div>
+        <div className="profile__web profile__web-position">UI/UX дизайнер</div>
       </div>
     </motion.div>
   );

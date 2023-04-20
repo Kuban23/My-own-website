@@ -11,12 +11,13 @@ import todo from '../../assets/image/myjobs/todo.png';
 import telegrammBot from '../../assets/image/myjobs/telegrammbot.jpg';
 
 const workNavBtn = ['Все', 'Web', 'App', 'Дизайн'];
+
 const workImages = [
   {
     id: 1,
     img: pizza,
     name: 'project 1',
-    category: '1',
+    category: 1,   
     web: 'https://kuban23.github.io/pizza_react_typescript/',
     git: 'https://github.com/Kuban23/pizza_react_typescript',
   },
@@ -24,7 +25,7 @@ const workImages = [
     id: 2,
     img: cinema,
     name: 'project 2',
-    category: '1',
+    category: 1,    
     web: '#',
     git: 'https://github.com/Kuban23/movies-explorer-frontend',
   },
@@ -32,7 +33,7 @@ const workImages = [
     id: 3,
     img: mesto,
     name: 'project 3',
-    category: '1',
+    category: 1,    
     web: 'https://kuban23.github.io/mesto-react/',
     git: 'https://github.com/Kuban23/mesto-react',
   },
@@ -40,7 +41,7 @@ const workImages = [
     id: 4,
     img: travel,
     name: 'project 4',
-    category: '3',
+    category: 3,   
     web: 'https://kuban23.github.io/russian-travel/',
     git: 'https://github.com/Kuban23/russian-travel',
   },
@@ -48,7 +49,7 @@ const workImages = [
     id: 5,
     img: todo,
     name: 'project 5',
-    category: '2',
+    category: 2,   
     web: 'https://kuban23.github.io/to-do-list-react-typescript-tailwind-css/',
     git: 'https://github.com/Kuban23/to-do-list-react-typescript-tailwind-css',
   },
@@ -56,7 +57,7 @@ const workImages = [
     id: 6,
     img: telegrammBot,
     name: 'project 6',
-    category: '2',
+    category: 2,    
     web: 'https://t.me/CovidOmicronBot',
     git: 'https://github.com/Kuban23/TelegrammBot-Statistics-COVID19',
   },
@@ -65,25 +66,25 @@ const workImages = [
 const Portfolio = () => {
   const [active, setActive] = React.useState(0);
   const [tab, setTab] = React.useState(0);
-  const [works, setWorks] = React.useState([]);
+   const [works, setWorks] = React.useState([]);
 
   React.useEffect(() => {
     if (tab === 0) {
       setWorks(workImages);
     }
-    // else{
-    //   const newWork=workImages.filter((workImage)=>
-    //   workImage.category===tab     
-    //   )
-    //   setWorks(newWork)
-    // }
+    else{
+      const newWork=workImages.filter((workImage)=>
+      workImage.category===tab       
+      )      
+      setWorks(newWork);
+    }
 
   }, [tab]);
 
-  const click = (i) => {
+  const onClickBtn = (i) => {
     setActive(i);
     console.log(i);
-    setTab(i);
+    setTab(i)    
   };
 
   return (
@@ -97,7 +98,7 @@ const Portfolio = () => {
           <motion.button
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
-            onClick={() => click(i)}
+            onClick={() => onClickBtn(i)}
             className={active === i ? 'active' : ''}
             key={i}>
             {btn}

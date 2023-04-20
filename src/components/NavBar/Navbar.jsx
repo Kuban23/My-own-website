@@ -58,10 +58,14 @@ const Navbar = () => {
       animate={{ y: -3 }}
       transition={{ duration: 0.8 }}
       className={scroll ? 'wrapper active' : 'wrapper'}>
-      <div className="nav">
-        <div className="nav__logo">
-          <h3>АE</h3>
-        </div>
+      <div  
+      className="nav">
+        <motion.div 
+         whileHover={{ scale: 1.1 }}
+         transition={{ duration: 0.3 }}         
+        className="nav__logo">
+          <a href="#Главная">АE</a>
+        </motion.div>
         <ul className="nav__links">
           {navLinks.map((link, i) => (
             <li key={i}>
