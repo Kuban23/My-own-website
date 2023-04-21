@@ -1,192 +1,196 @@
 @import '../../scss/variables.scss';
 
-.wrapper{
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 10;
-	position: fixed;
+.wrapper {
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   position: fixed;
 
-	&.active {
-		background: rgba(255,255,255,0.15);
-		backdrop-filter: blur(10px);		
-  }
+   &.active {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+   }
 }
 
-.nav{
-		max-width: 1224px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 10px 33px;
-		margin-left: auto;
-		margin-right: auto;
-		position: relative;		
+.nav {
+   max-width: 1224px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 33px;
+   margin-left: auto;
+   margin-right: auto;
+   position: relative;
 
-	 &__logo{
-		background: $pink;
-		width: 45px;
-		height: 45px;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;		
-		cursor: pointer;
-		
-		a{
-			text-decoration: none;
-			color: #fff;
-		}
+   &__logo {
+      background: $pink;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
 
-	 }
+      a {
+         text-decoration: none;
+         color: #fff;
+      }
 
-	 &__links{
-		display: flex;
-		padding: 40px;
-		list-style-type: none;	
-		
-		li{
-			@media screen and (max-width: 800px){
+   }
+
+   &__links {
+      display: flex;
+      padding: 40px;
+      list-style-type: none;
+
+      li {
+         @media screen and (max-width: 800px) {
             display: none;
-        }
-		}
+         }
+      }
 
-		a{
-			color: #918d8d;
-			margin: 25px;
-	   	transition: .4s;
-			position: relative;			
-		}
-		a.active-link, a:hover{
-			color: $pink;					
-		}
+      a {
+         color: #918d8d;
+         margin: 25px;
+         transition: .4s;
+         position: relative;
+      }
 
-		a.active-link::after, a:hover::after{
-			position: absolute;
-			content: '';
-			width: 6px;
-			height: 6px;
-			background-color: $pink;
-			border-radius: 50%;
-			top: -4px;
-			left: 0px;
-			right: 0px;
-			margin: auto;
-			
-		}
+      a.active-link,
+      a:hover {
+         color: $pink;
+      }
 
-	 }
+      a.active-link::after,
+      a:hover::after {
+         position: absolute;
+         content: '';
+         width: 6px;
+         height: 6px;
+         background-color: $pink;
+         border-radius: 50%;
+         top: -4px;
+         left: 0px;
+         right: 0px;
+         margin: auto;
 
- 		&__socialIcons{
-			display: flex;
-			@media screen and (max-width: 800px) {
-			 display: none;
-			}
-		svg{
-		width: 20px;
-		height: 20px;
-		}
+      }
 
-		a{				
-		color: #918d8d;
-		margin: 10px;
-		 transition: .4s;
-		//  transition: opacity 0.5s ease-in-out;
-		
-		:hover {
-			transform: translateY(3px);
-			 //opacity: 0.7;
-	  }
-	}
-	
- }
+   }
 
-	&__menu{
-		background: #fff;
-		width: 35px;
-		height: 35px;
-		border-radius: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		cursor: pointer;
-		display: none;
-		
-		@media screen and (max-width:800px){
-			display: block;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
+   &__socialIcons {
+      display: flex;
 
-		svg{
-			width: 70%;
-		   height: 70%;
-		}
-	}
+      @media screen and (max-width: 800px) {
+         display: none;
+      }
 
-	&__closeMenu{
-		background: #000;
-		width: 64px;
-		height: 64px;
-		position: fixed;
-		right: 0;
-		top: 0;
-		border-radius: 50%;
-	}	
+      svg {
+         width: 20px;
+         height: 20px;
+      }
 
-	&__menuX{
-		color: #fff;
-		position: fixed;
-		top: 32px;
-		left: 0;
-		width: 100%;
-		height: 100vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
+      a {
+         color: #918d8d;
+         margin: 10px;
+         transition: .4s;
+         //  transition: opacity 0.5s ease-in-out;
 
-		svg{
-			width: 24px;
-			height: 24px;
-			position: absolute;
-			top: 32px;
-			right: 80px;
-		}
+         :hover {
+            transform: translateY(3px);
+            //opacity: 0.7;
+         }
+      }
 
-		li{
-			list-style-type: none;
-			margin-top: 16px;
+   }
 
-			a{
-				text-decoration: none;
-				color: #918d8d;
-				font-size: 24px;
-				transition: .4s;
-				position: relative;
-			}
+   &__menu {
+      background: #fff;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      display: none;
 
-			a.active-link, a:hover{
-				color: $pink;
-			}
+      @media screen and (max-width:800px) {
+         display: block;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
 
-			a.active-link::after, a:hover::after{
-				position: absolute;
-				content: '';
-				width: 6px;
-				height: 6px;
-				background-color: $pink;
-				border-radius: 50%;				
-				top: 0;
-				left: -10px;
-				right: 0px;
-				margin: auto;
-			}
-		}
-	}
-	
+      svg {
+         width: 70%;
+         height: 70%;
+      }
+   }
+
+   &__closeMenu {
+      background: #000;
+      width: 64px;
+      height: 64px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      border-radius: 50%;
+   }
+
+   &__menuX {
+      color: #fff;
+      position: fixed;
+      top: 32px;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      svg {
+         width: 24px;
+         height: 24px;
+         position: absolute;
+         top: 32px;
+         right: 80px;
+      }
+
+      li {
+         list-style-type: none;
+         margin-top: 16px;
+
+         a {
+            text-decoration: none;
+            color: #918d8d;
+            font-size: 24px;
+            transition: .4s;
+            position: relative;
+         }
+
+         a.active-link,
+         a:hover {
+            color: $pink;
+         }
+
+         a.active-link::after,
+         a:hover::after {
+            position: absolute;
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: $pink;
+            border-radius: 50%;
+            top: 0;
+            left: -10px;
+            right: 0px;
+            margin: auto;
+         }
+      }
+   }
+
 }
-	
-	
-

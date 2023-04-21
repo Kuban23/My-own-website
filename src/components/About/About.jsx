@@ -1,24 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import { FaUser, FaPhoneAlt, FaGoogle } from 'react-icons/fa';
 import './About.scss';
 import myphoto from '../../assets/image/myphoto.jpg';
+import { bios } from '../../Data';
 
-const bios = [
-   {
-      icon: <FaUser />,
-      value: 'Андрей',
-   },
-   {
-      icon: <FaPhoneAlt />,
-      value: '+7-981-710-60-57',
-   },
-   {
-      icon: <FaGoogle />,
-      value: 'kubanesin@gmail.com',
-   },
-];
 
 const About = () => {
    return (
@@ -37,7 +23,7 @@ const About = () => {
             <motion.div
                initial={{ x: 0, opacity: 0 }}
                whileInView={{ x: [-250, 0], opacity: 1 }}
-               transition={{ duration: 2.5 }}
+               transition={{ duration: 1.5 }}
                className="about__left">
                <motion.img
                   whileHover={{ y: -10, x: -10 }}
@@ -49,7 +35,7 @@ const About = () => {
             <motion.div
                initial={{ x: 0, opacity: 0 }}
                whileInView={{ x: [250, 0], opacity: 1 }}
-               transition={{ duration: 2.5 }}
+               transition={{ duration: 1.5 }}
                className="about__right">
                <p>
                   В 2021 году принял решение полностью изменить поле деятельности и мое внимание привлекла

@@ -1,44 +1,8 @@
 import React from 'react';
-import { FaHtml5, FaCss3, FaReact, FaNodeJs, FaSass, FaFigma } from 'react-icons/fa';
-import { DiJavascript } from 'react-icons/di';
-import { SiTypescript } from 'react-icons/si';
 import { motion } from 'framer-motion';
 
 import './Skills.scss';
-
-const icons = [
-   <FaHtml5 />,
-   <FaCss3 />,
-   <DiJavascript />,
-   <FaReact />,
-   <SiTypescript />,
-   <FaNodeJs />,
-   <FaSass />,
-   <FaFigma />,
-];
-
-const finish = [
-   {
-      id: 1,
-      number: '2+',
-      itemName: 'Продолжаю получать опыт',
-   },
-   {
-      id: 2,
-      number: '5+',
-      itemName: 'Довольный клиент',
-   },
-   {
-      id: 3,
-      number: '7+',
-      itemName: 'Разработанные приложения',
-   },
-   {
-      id: 4,
-      number: '-',
-      itemName: 'Обслуживаемые клиенты',
-   },
-];
+import { icons, finish } from '../../Data';
 
 const Skills = () => {
    const [active, setActive] = React.useState(1);
