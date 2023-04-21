@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-own-website/static/css/main.ce95131c.css",
-    "main.js": "/my-own-website/static/js/main.f704d5cc.js",
+    "main.js": "/my-own-website/static/js/main.0647d6cc.js",
     "static/js/787.3bf96c60.chunk.js": "/my-own-website/static/js/787.3bf96c60.chunk.js",
     "static/media/russian_travel.jpg": "/my-own-website/static/media/russian_travel.ef0aac13bebd924136ee.jpg",
     "static/media/mesto.png": "/my-own-website/static/media/mesto.859534a33abc814c9314.png",
@@ -12,11 +12,11 @@
     "static/media/todo.png": "/my-own-website/static/media/todo.057130b82de51281bc2b.png",
     "index.html": "/my-own-website/index.html",
     "main.ce95131c.css.map": "/my-own-website/static/css/main.ce95131c.css.map",
-    "main.f704d5cc.js.map": "/my-own-website/static/js/main.f704d5cc.js.map",
+    "main.0647d6cc.js.map": "/my-own-website/static/js/main.0647d6cc.js.map",
     "787.3bf96c60.chunk.js.map": "/my-own-website/static/js/787.3bf96c60.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ce95131c.css",
-    "static/js/main.f704d5cc.js"
+    "static/js/main.0647d6cc.js"
   ]
 }
